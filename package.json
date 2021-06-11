@@ -18,6 +18,39 @@
     "tutorial",
     "demo"
   ],
+  "build": {
+    "appId": "org.vibe.jagoclient",
+    "files": [
+      "./build/**/*",
+      "./src/electron-starter.js"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
   "author": "vibe",
   "license": "CC0-1.0",
   "devDependencies": {
