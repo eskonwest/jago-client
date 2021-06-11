@@ -7,7 +7,7 @@
     "output": "dist",
     "buildResources": "static/icons"
   },
-  "files": ["build/**/*", "package.json", "static/**/*"],
+  "files": ["package.json"],
   "publish": "github",
   "linux": {
     "category": "Network",
