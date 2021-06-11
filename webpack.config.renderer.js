@@ -39,17 +39,7 @@ const extPopupConfig = getConfig({
 
 applyEntries('app', appConfig, [
   ...(process.env.ENABLE_AUTOFILL ? ['form-fill', 'credentials'] : []),
-  'app',
-  'permissions',
-  'auth',
-  'find',
-  'menu',
-  'search',
-  'preview',
-  'tabgroup',
-  'downloads-dialog',
-  'add-bookmark',
-  'zoom',
+  'app'
 ]);
 
 if (process.env.ENABLE_EXTENSIONS) {
@@ -58,7 +48,7 @@ if (process.env.ENABLE_EXTENSIONS) {
   ];
   extPopupConfig.plugins.push(
     new HtmlWebpackPlugin({
-      title: 'Starboard',
+      title: 'Jago Macro',
       template: 'static/pages/extension-popup.html',
       filename: `extension-popup.html`,
       chunks: [`vendor.app`, 'extension-popup'],
