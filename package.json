@@ -7,7 +7,8 @@
     "start": "electron .",
     "compile-win32": "electron-builder -w",
     "compile-darwin": "electron-builder -m",
-    "compile-linux": "electron-builder -l"
+    "compile-linux": "electron-builder -l",
+    "dist": "build"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
