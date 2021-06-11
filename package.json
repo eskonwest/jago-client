@@ -22,9 +22,20 @@
     "url": "https://github.com/starboardops/starboard.desktop/issues"
   },
   "scripts": {
+    "dev-renderer": "cross-env DEV=1 webpack-dev-server --config webpack.config.renderer.js",
     "build-renderer": "webpack --config webpack.config.renderer.js",
+    "pre-renderer": "cross-env PREBUILD=1 npm run build-renderer",
+    "dev": "cross-env START=1 npm run watch",
     "build": "npm run pre-renderer && concurrently \"npm run build-renderer\" \"webpack\" \"webpack --config webpack.config.web.js\"",
-    "compile": "npm run build && electron-builder --win"
+    "ci-build": "node scripts/ci-build.js",
+    "debug-ci": "electron .",
+    "watch": "concurrently \"npm run dev-renderer\" \" cross-env DEV=1 webpack\" \"cross-env DEV=1 webpack-dev-server --config webpack.config.web.js\"",
+    "compile": "npm run build && electron-builder --win",
+    "compile-arm": "npm run build && electron-builder --win --arm64 --armv7l",
+    "lint": "eslint \"src/**/*.ts*\" \"src/**/*.tsx*\"",
+    "lint-fix": "npm run lint -- --fix",
+    "rebuild": "electron-builder install-app-deps",
+    "extensions": "node scripts/extensions.js"
   },
   "devDependencies": {
     "@cliqz/adblocker-electron": "^1.16.0",
