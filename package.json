@@ -18,7 +18,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "vibe",
   "license": "CC0-1.0",
   "devDependencies": {
     "@babel/core": "^7.13.15",
