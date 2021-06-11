@@ -1,9 +1,6 @@
 {
   "appId": "org.vibe.jago",
   "productName": "Jago Client",
-  "nsis": {
-    "include": "static/installer.nsh"
-  },
   "generateUpdatesFilesForAllChannels": true,
   "asar": true,
   "directories": {
@@ -28,7 +25,7 @@
   "win": {
     "target": [
       {
-        "target": "nsis-web",
+        "target": "nsis",
         "arch": ["x64", "ia32"]
       },
       {
