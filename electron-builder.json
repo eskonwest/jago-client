@@ -2,7 +2,7 @@
   "appId": "org.vibe.jago",
   "productName": "Jago Client",
   "generateUpdatesFilesForAllChannels": true,
-  "asar": false,
+  "asar": true,
   "directories": {
     "output": "dist"
   },
